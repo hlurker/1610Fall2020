@@ -7,7 +7,9 @@ public class PowerUp : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         print("OnTriggerEnter");
+        if (collision.gameObject) ;
     }
+
 }
 
 
