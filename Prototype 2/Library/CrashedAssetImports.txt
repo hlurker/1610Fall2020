@@ -1,0 +1,3 @@
+Assets/Course Library/_Source_Files/FBX/Deer.fbx
+Assets/Course Library/_Source_Files/FBX/SA_Animal_Birds.fbx
+Assets/Course Library/_Source_Files/FBX/SA_Animal_Chick.fbx
