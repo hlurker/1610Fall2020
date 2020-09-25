@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,9 +18,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if (transform.position.x < -xRange)
-        { 
-                transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
+        if (transform.position.x < -xRange)
+        {
+            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
         }
 
         if (transform.position.x < xRange)
@@ -39,6 +36,5 @@ public class PlayerController : MonoBehaviour
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
 
         }
-
-
     }
+

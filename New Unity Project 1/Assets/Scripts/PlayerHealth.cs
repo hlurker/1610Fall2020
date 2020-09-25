@@ -21,5 +21,4 @@ public class PlayerHealth : MonoBehaviour
     {
         print("Up.");
     }
-
 }
