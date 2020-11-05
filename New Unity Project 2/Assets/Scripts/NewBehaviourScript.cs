@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class FlipObjectBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public float rotateValue;
+    
+    
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.LeftArrow)|| Input.GetKey(KeyCode.A))
+        {
+            rotateValue = 180;
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        {
+            rotateValue = 180;
+        }
+
+        transform.rotation = Quaternion.Euler(x: 0, y: rotateValue, z: 0);
     }
 }

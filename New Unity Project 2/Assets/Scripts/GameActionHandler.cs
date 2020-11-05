@@ -1,18 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
-public class GameActionHandler : MonoBehaviour
+[CreateAssetMenu]
+public class GameAction : ScriptableObject
 {
-    public GameAction actionObj;
-    public UnityEvent handlerEvent;
+    public UnityAction action;
 
-    private void Start()
+    public void Raise()
     {
-        actionObj.action += Handle;
-    }
-    private void Handle()
-    {
-        handlerEvent.Invoke();
-    }
+        action.Invoke();
+    }   
 }

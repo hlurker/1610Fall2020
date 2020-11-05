@@ -13,7 +13,7 @@ public class RotateObject : MonoBehaviour
         if (canRotate)
         {
             var finalSpeed = rotateSpeed * Time.deltaTime;
-            transform.Rotate(xAngle; 0, yAngle: 0, zAngle finalSpeed);
+            transform.Rotate(yAngle: 0, yAngle: 0, zAngle: finalSpeed);
         }
     }
 }
