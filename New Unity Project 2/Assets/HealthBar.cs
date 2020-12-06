@@ -1,31 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+[CreateAssetMenu]
+public class FloatData : ScriptableObject
 {
-    var Health = 100;
-    var position = Rect(500, 15, 200, 20);
+    public float value;
 
-    function OnTriggerEnter(Object : Collider)
+    public void UpdateValue(float number)
     {
-        if (Object.tag == "Obstacle")
-        {
-            Health -= 50;
-
-        }
+        value += number;
     }
 
-    function Update()
+    public void ReplaceValue(float number)
     {
-        if (Health <= 0)
-        {
-            Application.LoadLevel(Application.loadedLevel);
-        }
+        value = number;
     }
 
-    function OnGUI()
+    public void DisplayImage(Image img)
     {
-        GUI.backgroundColor = Color.green;
-        GUI.HorizontalScrollbar(position, 0, Health, 0, 100);
+        img.fillAmount = value;
     }
+
+    public void DisplayNumber(Text txt)
+    {
+        txt.text = value.ToString();
+    }
+}
