@@ -8,16 +8,19 @@ public class NewBehaviourScript : MonoBehaviour
     public IntData cashTotal;
     public Collectible collectibleObj;
     public Text txtObj;
-    private SpriteRenderer renderer;
+    private new SpriteRenderer renderer;
+
 
     // Start is called before the first frame update
     void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
         renderer.sprite = collectibleObj.art;
-        renderer.color =
-        txtObj.text = cashTotal.value.ToString();
+        NewMethod();
     }
+
+    private void NewMethod() => renderer.color =
+        txtObj.text = cashTotal.value.ToString();
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,9 +28,5 @@ public class NewBehaviourScript : MonoBehaviour
         txtObj.text = cashTotal.value.ToString();
         gameObject.SetActive(false);
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
